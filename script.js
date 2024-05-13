@@ -497,6 +497,12 @@ bgMusic.volume = 0.3;
 const correctSound = new Audio();
 correctSound.src = "./assets/rightAnswer.mp3";
 
+if (highScoreUser === null) {
+  highScoreUser = "Anonymous";
+}
+if (highScore === null) {
+  highScore = 0;
+}
 highScoreHTML.innerHTML = `Best player so far is ${highScoreUser} with ${highScore} €`;
 
 function playPartialSound(audio, startTime, duration) {
